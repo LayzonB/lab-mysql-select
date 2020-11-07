@@ -1,7 +1,7 @@
 
 /* challenge 1*/
 SELECT au.au_id AS "Authors ID", au.au_lname AS "Last Name",au.au_fname AS "First Name", 
-title, pub_name 
+title, pub_name AS "Publisher"
 FROM authors AS au
 INNER JOIN titleauthor ON titleauthor.au_id = au.au_id
 LEFT JOIN  publications.titles ON titleauthor.title_id = titles.title_id
